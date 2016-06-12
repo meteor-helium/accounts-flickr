@@ -7,12 +7,14 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
+  api.versionsFrom("METEOR@1.2.0.2");
+
   api.use('underscore', ['server']);
   api.use('accounts-base', ['client', 'server']);
   // Export Accounts (etc) to packages using this one.
   api.imply('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('helium:flickr', ['client', 'server']);
+  api.use('helium:flickr@1.0.0', ['client', 'server']);
 
   api.use('http', ['client', 'server']);
 
