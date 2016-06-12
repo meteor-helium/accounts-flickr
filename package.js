@@ -12,7 +12,7 @@ Package.onUse(function(api) {
   // Export Accounts (etc) to packages using this one.
   api.imply('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('flickr', ['client', 'server']);
+  api.use('helium:flickr', ['client', 'server']);
 
   api.use('http', ['client', 'server']);
 
